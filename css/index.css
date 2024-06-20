@@ -1,0 +1,243 @@
+@font-face {
+    font-family: Nunito;
+    src: url('../assets/fonts/Nunito/NunitoSans-Regular.ttf');
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+body {
+    background-image: url(../assets/imgs/backgroundImage.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 90%;
+    margin-inline: auto;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+}
+
+
+.nav-logo a {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.875rem;
+    color: #C7C7C7;
+}
+
+.nav-logo a span {
+    color: #C0A58F;
+}
+
+.nav-list a {
+    font-family: Nunito;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    display: inline-block;
+    position: relative;
+}
+
+.nav-list a:hover{
+    color: rgb(252, 244, 196);
+    text-shadow: 0 5px 15px rgba(252, 244, 196, 1);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+.hero .title {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.4375rem;
+    color: #FFFFFF;
+}
+
+.hero .title-underline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 10rem;
+    margin-bottom: 18px;
+}
+
+.hero .search-bar form {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(196, 196, 196, 0.3);
+    border-radius: 35px;
+    padding: 18px;
+    padding-left: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(4px) saturate(180%);
+}
+
+.search-bar input[type=text] {
+    background-color: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.4);
+    width: 400px;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.search-bar button img {
+    width: 25px;
+}
+
+.search-bar button {
+    border: 0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: #C0A583;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../assets/imgs/infobg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: 40px;
+    padding-top: 50px;
+}
+
+.info .chair img {
+    position: relative;
+    top: -95px;
+    height: auto;
+    width: 900px;
+}
+
+.info-card {
+    margin: 18px;
+}
+
+.info-card--head {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 50px;
+}
+
+.info-card--data {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.info-card--more-button a {
+    text-decoration: none;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #A47D4E;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.info-card--more-button img {
+    width: auto;
+    height: 12px;
+}
+
+
+.hover-1:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #A47D4E;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s;
+}
+
+.hover-1:hover:after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
